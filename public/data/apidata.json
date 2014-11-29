@@ -1,0 +1,231 @@
+[
+  {
+    "title": "Accounts",
+    "apis": [
+      {
+        "name": "Get account by customer id",
+        "path": "/accounts/getByCustomer?CustomerId=1",
+        "method": "GET"
+      },
+      {
+        "name": "Get account by id",
+        "path": "/accounts/get?AccountId=1",
+        "method": "GET"
+      },
+      {
+        "name": "Get account history by period",
+        "path": "/accounts/history/getByPeriod?AccountId=1&Period=201304",
+        "method": "GET"
+      },
+      {
+        "name": "Get account history by id",
+        "path": "/accounts/history/get?AccountId=1",
+        "method": "GET"
+      },
+      {
+        "name": "Create account",
+        "path": "/accounts/create?",
+        "method": "POST",
+        "payload": "{\"CustomerId\":\"1\",\"ProductCatNm\":\"Savings - Deposit Products\",\"ProductClsNm\":\"Savings accounts Household\",\"ProductGrpNm\":\"Demand Deposits HH\"}"
+      },
+      {
+        "name": "Update account",
+        "path": "/accounts/update?",
+        "method": "POST",
+        "payload": "{\"AccountId\":\"7\",\"ProductCatNm\":\"Savings - Deposit Products\",\"ProductClsNm\":\"Savings accounts Household\",\"ProductGrpNm\":\"Demand Deposits Corp.\"}"
+      },
+      {
+        "name": "Delete account",
+        "path": "/accounts/delete?",
+        "method": "POST",
+        "payload": "{\"CustomerId\":\"1\",\"AccountId\":\"90002\"}"
+      }
+    ]
+  },
+  {
+    "title": "Customers",
+    "apis": [
+      {
+        "name": "Get customer by id",
+        "path": "/customer/get?CustomerId=1",
+        "method": "GET"
+      },
+      {
+        "name": "Create customer",
+        "path": "/customer/create?",
+        "method": "POST",
+        "payload": "{\"FamilyId\":1,\"CustomerType\":\"SolocustomerID\",\"Age\":62,\"Gender\":\"M\",\"Municipality\":615,\"SocialClass\":\"Ukendt\",\"DnaFam\":\"Single\",\"FamType\":\"single,noKids\",\"BoligForm\":\"HusEjer\",\"X400\":999999,\"Y400\":999999}"
+      },
+      {
+        "name": "Update customer",
+        "path": "/customer/update?",
+        "method": "POST",
+        "payload": "{\"CustomerId\":\"3\",\"FamilyId\":31,\"CustomerType\":\"SolocustomerID\",\"Age\":55,\"Gender\":\"M\",\"Municipality\":615,\"SocialClass\":\"Ukendt\",\"DnaFam\":\"Single\",\"FamType\":\"single,noKids\",\"BoligForm\":\"HusEjer\",\"X400\":999999,\"Y400\":999999}"
+      }
+    ]
+  },
+  {
+    "title": "Transaction",
+    "apis": [
+      {
+        "name": "Get transaction by account",
+        "path": "/transactions/getByAccountId?AccountId=4",
+        "method": "GET"
+      },
+      {
+        "name": "Get transaction by account and date",
+        "path": "/transactions/getByAccountIdAndDate?AccountId=4&Date=20130116",
+        "method": "GET"
+      },
+      {
+        "name": "Get transaction by account and period",
+        "path": "/transactions/getByAccountIdAndPeriod?AccountId=4&Period=201301",
+        "method": "GET"
+      },
+      {
+        "name": "Withdraw money",
+        "path": "/transactions/withdrawMoney?",
+        "method": "POST",
+        "payload": "{\"AccountId\":\"90031\",\"Amount\":\"5000.00\"}"
+      },
+      {
+        "name": "Transfer money",
+        "path": "/transactions/transferMoney?",
+        "method": "POST",
+        "payload": "{\"FromAccountId\":\"13\",\"ToAccountId\":\"13\",\"Amount\":\"1.00\"}"
+      },
+      {
+        "name": "Reduce Loan",
+        "path": "/transactions/reduceLoan?",
+        "method": "POST",
+        "payload": "{\"AccountId\":\"22\",\"Amount\":\"50.00\"}"
+      },
+      {
+        "name": "Deposit Money",
+        "path": "/transactions/depositMoney?",
+        "method": "POST",
+        "payload": "{\"AccountId\":\"10\",\"Amount\":\"50.00\"}"
+      },
+      {
+        "name": "Increase Loan",
+        "path": "/transactions/increaseLoan?",
+        "method": "POST",
+        "payload": "{\"AccountId\":\"22\",\"Amount\":\"50.00\"}"
+      }
+    ]
+  },
+  {
+    "title": "Products",
+    "apis": [
+      {
+        "name": "Get securities by time period",
+        "path": "/products/securities/getByCustomerIdAndPeriod?CustomerId=1&Period=201301",
+        "method": "GET"
+      },
+      {
+        "name": "Get securities by customer",
+        "path": "/products/securities/getByCustomerId?CustomerId=1",
+        "method": "GET"
+      },
+      {
+        "name": "Get Product by id",
+        "path": "/products/getProduct?ProductId=107",
+        "method": "GET"
+      },
+      {
+        "name": "Get Product Data",
+        "path": "/products/getProductData?ProductId=107",
+        "method": "GET"
+      },
+      {
+        "name": "Get all products",
+        "path": "/products/getAll?",
+        "method": "GET"
+      },
+      {
+        "name": "Delete Data from Product",
+        "path": "/products/deleteData?",
+        "method": "POST",
+        "payload": "{\"ProductId\":\"107\",\"DataName\":\"InterestRate\"}"
+      },
+      {
+        "name": "Delete Product",
+        "path": "/products/delete?",
+        "method": "POST",
+        "payload": "{\"ProductId\":\"107\"}"
+      },
+      {
+        "name": "Create Product",
+        "path": "/products/create?",
+        "method": "POST",
+        "payload": "{\"ProductName\":\"TestproductLLA\"}"
+      },
+      {
+        "name": "Add data to product",
+        "path": "/products/addData?",
+        "method": "POST",
+        "payload": "{\"ProductId\":\"107\",\"DataName\":\"InterestRate\",\"DataValue\":\"3.05\"}"
+      }
+    ]
+  },
+  {
+    "title": "Locations",
+    "apis": [
+      {
+        "name": "Get All Kommunes",
+        "path": "/location/getAllKommuneNames?",
+        "method": "GET"
+      },
+      {
+        "name": "Get Kommune Name",
+        "path": "/location/getKommuneName?KommuneId=1",
+        "method": "GET"
+      },
+      {
+        "name": "Get Branch Information",
+        "path": "/location/getAllBranches?",
+        "method": "GET"
+      },
+      {
+        "name": "Get All ATMs",
+        "path": "/location/getAllAtm?",
+        "method": "GET"
+      },
+      {
+        "name": "Get all Branch ATMs",
+        "path": "/location/getAllBranchAtm?",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "title": "Utilities",
+    "apis": [
+      {
+        "name": "GetErrorEventsByDateAndTimeFrame",
+        "path": "/utilities/getErrorEventsByDateAndTimeFrame?ErrorDate&ErrorFromTime&ErrorToTime",
+        "method": "GET"
+      },
+      {
+        "name": "getErrorEventsByDate",
+        "path": "/utilities/getErrorEventsByDate?ErrorDate",
+        "method": "GET"
+      },
+      {
+        "name": "Loan Quote",
+        "path": "/utilities/quote?loanAmount=20000&annualInterestRate=0.9&termInMonths=52",
+        "method": "GET"
+      },
+      {
+        "name": "Ping (no ClientID)",
+        "path": "/utilities/pingNoClientID?",
+        "method": "GET"
+      },
+      {
+        "name": "Ping",
+        "path": "/utilities/ping?",
+        "method": "GET"
+      }
+    ]
+  }
+]

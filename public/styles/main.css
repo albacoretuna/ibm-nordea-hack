@@ -1,0 +1,28 @@
+body {
+  background-color: #0D6194;
+}
+
+.top-buffer-l {
+  margin-top: 50px;
+}
+
+.top-buffer-m {
+  margin-top: 20px;
+}
+
+.top-buffer-s {
+  margin-top: 10px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-logo {
+  height: 20px;
+}
+
+#mapContainer {
+  height: 550px;
+  border: 1px solid #333;
+}

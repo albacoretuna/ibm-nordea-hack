@@ -1,0 +1,33 @@
+<div class="container jumbotron">
+  <div class="col-md-3">
+    <form ng-submit="getAccount()">
+      <b>Get account with ID:</b>
+      <input type="number" class="form-control" ng-model="accountId">
+      <button type="submit" class="btn btn-primary top-buffer-s">Get account</button>
+      <img ng-show="loading" src="images/ajax-loader3.gif" class="top-buffer-s"/>
+    </form>
+  </div>
+  <div class="col-md-9 top-buffer-s">
+    <table class="table table-bordered">
+      <tr>
+        <td><b>Income: </b>{{account.Income}}</td>
+        <td><b>Period: </b>{{account.Period}}</td>
+      </tr>
+      <tr>
+        <td><b>ProductCatNm: </b>{{account.ProductCatNm}}</td>
+        <td> <b>ProductClsNm: </b>{{account.ProductClsNm}}</td>
+      </tr>
+      <tr>
+        <td><b>ProductGrpNm: </b>{{account.ProductGrpNm}}</td>
+        <td><b>StatusCode: </b>{{account.StatusCode}}</td>
+      </tr>
+      <tr>
+        <td><b>VolumeLending: </b>{{account.VolumeLending}}</td>
+        <td><b>VolumeSaving: </b>{{account.VolumeSaving}}</td>
+      </tr>
+      <tr>
+        <td><b>StatusMessage: </b>{{account.statusMessage}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

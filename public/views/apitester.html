@@ -1,0 +1,38 @@
+<div class="container jumbotron">
+
+
+  <div class="col-md-12">
+    <h2>Nordea API Tester</h2>
+  </div>
+
+  <div class="col-md-3">
+    <accordion close-others="'true'">
+      <accordion-group ng-repeat="group in apiData" heading="{{group.title}}">
+        <div ng-repeat="api in group.apis">
+          <a href ng-click="selectApi(api)">{{api.name}}</a>
+          <br>
+        </div>
+      </accordion-group>
+    </accordion>
+  </div>
+  <div class="col-md-9">
+    <legend>{{selectedApi.name}}</legend>
+
+    <form class="form" ng-submit="execute()">
+      <input type="radio" ng-model="selectedApi.method" value="GET">GET<br/>
+      <input type="radio" ng-model="selectedApi.method" value="POST">POST<br/>
+      <input type="radio" ng-model="selectedApi.method" value="PUT">PUT<br/>
+      <input type="radio" ng-model="selectedApi.method" value="DELETE">DELETE<br/>
+      <input ng-model="clientid" class="form-control top-buffer-s" placeholder="Client ID">
+      <input ng-model="selectedApi.path" class="form-control top-buffer-s" placeholder="Path">
+      <input ng-model="selectedApi.payload" ng-show="hasPayload()" class="form-control top-buffer-s" placeholder="Payload">
+      <button type="submit" class="btn btn-default top-buffer-s">Execute</button>
+      <img ng-show="loading" src="images/ajax-loader3.gif" class="top-buffer-s"/>
+    </form>
+
+    <span ng-show="responseTime">Response time: {{responseTime}}ms</span>
+    <div class="top-buffer-s well">
+      <json-formatter json="jsonResponse" open="1"></json-formatter>
+    </div>
+  </div>
+</div>

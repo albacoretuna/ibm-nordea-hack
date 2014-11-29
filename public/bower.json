@@ -1,0 +1,22 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "authors": [
+    "Lorentz Lasson <lasson.lorentz@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.3",
+    "bootstrap": "~3.3.1",
+    "angular-route": "~1.3.3",
+    "json-formatter": "~0.2.5",
+    "angular-bootstrap": "~0.12.0"
+  }
+}

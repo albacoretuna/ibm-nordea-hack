@@ -1,0 +1,55 @@
+<div>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" >
+        <img class="navbar-logo" src="images/ibm_logo.png" \>
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#apitester" class="navbar-item">
+            API Tester
+          </a>
+        </li>
+        <li>
+          <a href="#customer" class="navbar-item">
+            Customer
+          </a>
+        </li>
+        <li>
+          <a href="#account" class="navbar-item">
+            Account
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="https://hub.jazz.net" target="_blank">
+            DevOps Services
+            <img class="navbar-logo" src="images/devOpsServies_logo.png" \>
+          </a>
+        </li>
+        <li>
+          <a href="https://bluemix.net" target="_blank">
+            Bluemix
+            <img class="navbar-logo" src="images/bluemix_logo.png" \>
+          </a>
+        </li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</div>

@@ -1,0 +1,44 @@
+<div class="container-fluid jumbotron">
+  <div class="col-lg-2 col-md-6">
+    <form ng-submit="getCustomer()">
+      <b>Get customer with ID:</b>
+      <input type="number" class="form-control" ng-model="customerId">
+      <button type="submit" class="btn btn-primary top-buffer-s">Get customer</button>
+      <img ng-show="loading" src="images/ajax-loader3.gif" class="top-buffer-s"/>
+    </form>
+  </div>
+  <div class="col-lg-3 col-md-6 top-buffer-s">
+    <table class="table table-bordered">
+      <tr>
+        <td><b>Age: </b>{{customer.Age}}</td>
+        <td><b>BoligForm: </b>{{customer.BoligForm}}</td>
+      </tr>
+      <tr>
+        <td><b>CustomerId: </b>{{customer.CustomerId}}</td>
+        <td> <b>CustomerIdCreateDate: </b>{{customer.CustomerIdCreateDate}}</td>
+      </tr>
+      <tr>
+        <td><b>CustomerType: </b>{{customer.CustomerType}}</td>
+        <td><b>DnaFam: </b>{{customer.DnaFam}}</td>
+      </tr>
+      <tr>
+        <td><b>FamType: </b>{{customer.FamType}}</td>
+        <td><b>FamilyId: </b>{{customer.FamilyId}}</td>
+      </tr>
+      <tr>
+        <td><b>Gender: </b>{{customer.Gender}}</td>
+        <td><b>Municipality: </b>{{customer.Municipality}}</td>
+      </tr>
+      <tr>
+        <td><b>SocialClass: </b>{{customer.SocialClass}}</td>
+      </tr>
+      <tr>
+        <td><b>X400: </b>{{customer.X400}}</td>
+        <td><b>Y400: </b>{{customer.Y400}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-lg-7 col-md-12">
+    <div id="mapContainer"></div>
+  </div>
+</div>
